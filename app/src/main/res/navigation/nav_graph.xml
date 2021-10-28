@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signUpIdFragment">
+
+    <fragment
+        android:id="@+id/signUpIdFragment"
+        android:name="kr.hs.dgsw.k_bank.fragment.SignUpIdFragment"
+        android:label="fragment_sign_in_idpassword"
+        tools:layout="@layout/fragment_sign_up_id">
+        <action
+            android:id="@+id/action_signUpIdFragment_to_signUpPasswordFragment"
+            app:destination="@id/signUpPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpPasswordFragment"
+        android:name="kr.hs.dgsw.k_bank.fragment.SignUpPasswordFragment"
+        android:label="fragment_sign_in_password"
+        tools:layout="@layout/fragment_sign_up_password">
+        <action
+            android:id="@+id/action_signUpPasswordFragment_to_signUpNumberFragment"
+            app:destination="@id/signUpNumberFragment" />
+        <action
+            android:id="@+id/action_signUpPasswordFragment_to_signUpIdFragment"
+            app:destination="@id/signUpIdFragment" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpNumberFragment"
+        android:name="kr.hs.dgsw.k_bank.fragment.SignUpNumberFragment"
+        android:label="fragment_sign_in_number"
+        tools:layout="@layout/fragment_sign_up_number">
+        <action
+            android:id="@+id/action_signUpNumberFragment_to_signUpPeopleNumberFragment"
+            app:destination="@id/signUpPeopleNumberFragment" />
+        <action
+            android:id="@+id/action_signUpNumberFragment_to_signUpPasswordFragment"
+            app:destination="@id/signUpPasswordFragment" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="pwd"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpPeopleNumberFragment"
+        android:name="kr.hs.dgsw.k_bank.fragment.SignUpPeopleNumberFragment"
+        android:label="fragment_sign_in_people_number"
+        tools:layout="@layout/fragment_sign_up_people_number">
+        <action
+            android:id="@+id/action_signUpPeopleNumberFragment_to_signUpNumberFragment"
+            app:destination="@id/signUpNumberFragment" />
+        <action
+            android:id="@+id/action_signUpPeopleNumberFragment_to_signUpNameFragment"
+            app:destination="@id/signUpNameFragment" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="pwd"
+            app:argType="string" />
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpNameFragment"
+        android:name="kr.hs.dgsw.k_bank.fragment.SignUpNameFragment"
+        android:label="fragment_sign_in_name"
+        tools:layout="@layout/fragment_sign_up_name">
+        <action
+            android:id="@+id/action_signUpNameFragment_to_signUpPeopleNumberFragment"
+            app:destination="@id/signUpPeopleNumberFragment" />
+        <action
+            android:id="@+id/action_signUpNameFragment_to_signUpProfileFragment"
+            app:destination="@id/signUpProfileFragment" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="pwd"
+            app:argType="string" />
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+        <argument
+            android:name="peopleNumber"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpProfileFragment"
+        android:name="kr.hs.dgsw.k_bank.fragment.SignUpProfileFragment"
+        android:label="fragment_sign_up_profile"
+        tools:layout="@layout/fragment_sign_up_profile" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="pwd"
+            app:argType="string" />
+    </fragment>
+</navigation>

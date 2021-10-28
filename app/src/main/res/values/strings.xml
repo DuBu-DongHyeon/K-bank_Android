@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">K-bank</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="id">아이디</string>
+    <string name="ps">비밀번호</string>
+    <string name="number">전화번호</string>
+    <string name="name">이름</string>
+    <string name="nickname">별명</string>
+    <string name="people_number">주민등록번호</string>
+    <string name="ps_check">비밀번호 확인</string>
+    <string name="next">다음</string>
+    <string name="profile">프로필 등록</string>
+</resources>
